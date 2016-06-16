@@ -1,0 +1,20 @@
+
+<h2><%= @dish.name %></h2>
+
+<img src="<%= @dish.image_url %>" alt="">
+
+<form action="/comments" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="hidden" name="dish_id" value="<%= @dish.id %>">
+  <p><%= @comment.comment if @comment%></p>
+  <% if logged_in? %> <!-- change this later to if user is same as poster -->
+  <button>Delete Comment</button>
+  <% end %>
+</form>
+
+<form action="/comments" method="post">
+  <input type="hidden" name="dish_id" value="<%= @dish.id %>">
+  <input type="hidden" name="user_id" value="<%= current_user.id%>">
+  <textarea name="comment" rows="8" cols="50" placeholder="Comment here"></textarea>
+  <button>Comment</button>
+</form>

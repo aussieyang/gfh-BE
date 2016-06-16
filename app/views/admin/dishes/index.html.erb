@@ -1,0 +1,16 @@
+<h1>Dishes</h1>
+
+<% @dishes.each do |dish| %>
+
+  <div>
+    <a href="/admin/dishes/<%=dish.id%>">
+    <%= dish.name %>
+    </a>
+  </div>
+
+  <img src="<%= dish.image_url %>" alt="">
+
+  <% end %>
+
+  <a href="/admin/dishes/new">New Dish</a>
+  <%= link_to 'New dish', new_admin_dish_path %> <!-- Does the same as line above new_dish_path is a method - can pass a variable into it-->

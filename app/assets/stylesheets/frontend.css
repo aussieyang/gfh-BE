@@ -1,0 +1,87 @@
+main {
+  margin-top: 3em;
+}
+
+.ui-card {
+  float: left;
+  width: 22%;
+  margin: 10px;
+  background-color: pink;
+  border-radius: 5%;
+  border-style: solid;
+  border-color: grey;
+}
+
+header {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ui-user-info {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+header img {
+  height: 100%;
+  border-radius: 50%;
+  float:left;
+}
+
+.ui-card-img {
+  position: relative;
+  transition: .5s;
+}
+
+.dish-img {
+  width: 100%;
+}
+
+
+.like {
+  user-select:none;
+  -webkit-user-select: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2em;
+  color: grey;
+  transition: .5s;
+  cursor: pointer;
+  opacity: 0
+}
+
+.like:hover {
+  color: red;
+}
+
+/*When hovering over img, target heart and show it*/
+.ui-card-img:hover .like {
+  opacity: 1
+}
+
+header, .ui-card-footer, .ui-card-info {
+  padding: 10px;
+}
+
+.ui-card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-nav {
+  background-color: plum;
+  height: 3em;
+  position:fixed;
+  width: 100%;
+  top: 0;
+  z-index: 5; /*brings the element to the fore*/
+  transition: 0.5s;
+}
+
+.mini {
+  height: 1em;
+}

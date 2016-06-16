@@ -1,0 +1,26 @@
+<script id="dish-template" type="text/x-underscore-template">
+  <div class="ui-card" dish-id="{{ id }}">
+    <header>
+      <div class="ui-user-info">
+        <img src="http://placehold.it/150x150" alt="">
+        <p class="poster-name">John Smith</p>
+      </div>
+      <p class="timestamp">14h</p>
+    </header>
+
+    <div class="ui-card-img">
+      <img class="dish-img" src="{{ image_url }}" alt="">
+      <span class="like">&hearts;</span>
+    </div>
+
+    <div class="ui-card-info">
+      <h2><a href="/dishes/{{ id }}"> {{ name }} </a></h2>
+      <h4> Some restaurant </h4>
+    </div>
+
+    <div class="ui-card-footer">
+      <p> Bookmark </p>
+      <p class="counter"> {{ counter }} </p>
+    </div>
+  </div>
+</script>

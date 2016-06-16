@@ -1,0 +1,15 @@
+<h1><%= @user.name %></h1>
+
+<p><%= @user.email %></p>
+
+<form action="/admin/users/<%= @user.id %>/edit" method="get">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <button>Edit</button>
+</form>
+
+<form action="/admin/users/<%= @user.id %>" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <input type="hidden" name="_method" value="delete">
+  <button>Delete</button>
+</form>

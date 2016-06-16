@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Goodfoodhunting</title>
+  <%= stylesheet_link_tag    'front', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= session[:user_id] %>
+
+<div class="top-nav">
+  header
+</div>
+
+<main class="content">
+    <%= yield %>
+  </main>
+
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <script>
+    $(window).on('scroll', function(){
+      if ($(window).scrollTop() > 100) {
+        $('.top-nav').addClass('mini');
+      } else {
+        $('.top-nav').removeClass('mini');
+      }
+    })
+  </script>
+
+</body>
+</html>

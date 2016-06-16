@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Goodfoodhunting</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<h2><%=current_user.id%></h2>
+
+<div class="container">
+
+  <nav>
+    <ul>
+      <li><%= link_to 'dashboard', admin_root_path %></li>
+      <li><a href="/admin/dishes">dishes</a></li>
+      <li><a href="/admin/users">users</a></li>
+      <li><a href="/admin/likes">likes</a></li>
+    </ul>
+  </nav><main class="content">
+    <%= yield %>
+  </main>
+
+</div>
+
+
+</body>
+</html>

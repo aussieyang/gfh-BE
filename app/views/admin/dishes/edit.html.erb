@@ -1,0 +1,27 @@
+<!-- <form action="/admin/dishes/<%= @dish.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <p>Name</p>
+  <input type="text" name="name" value="<%= @dish.name %>">
+
+  <p>Image URL</p>
+  <input type="text" name="image_url" value="<%= @dish.image_url %>">
+
+  <button>Update</button>
+
+</form> -->
+
+<%= form_for [:admin, @dish] do |f|%>
+
+  <label>Name</label>
+  <%= f.text_field :name %>
+
+  <label>Image URL</label>
+  <%= f.text_field :image_url %>
+
+  <button>Edit</button>
+
+
+<% end %>

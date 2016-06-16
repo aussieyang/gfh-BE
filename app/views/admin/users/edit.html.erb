@@ -1,0 +1,14 @@
+<form action="/admin/users/<%= @user.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <p>Name</p>
+  <input type="text" name="user[name]" value="<%= @user.name %>">
+
+  <p>Email</p>
+  <input type="text" name="user[email]" value="<%= @user.email %>">
+
+  <button>Update</button>
+
+</form>
